@@ -31,6 +31,10 @@ juce_add_plugin(SteveSledgeCompressor
   COPY_PLUGIN_AFTER_BUILD FALSE
 )
 
+juce_add_binary_data(MaintainerArtwork
+  SOURCES Resources/maintainer_spectral_compressor.png
+)
+
 juce_generate_juce_header(SteveSledgeCompressor)
 
 target_sources(SteveSledgeCompressor PRIVATE
@@ -48,6 +52,7 @@ target_compile_definitions(SteveSledgeCompressor PUBLIC
 )
 
 target_link_libraries(SteveSledgeCompressor PRIVATE
+  MaintainerArtwork
   juce::juce_audio_utils
   juce::juce_dsp
   PUBLIC

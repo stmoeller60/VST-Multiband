@@ -23,6 +23,7 @@ private:
     using ButtonAttachment = juce::AudioProcessorValueTreeState::ButtonAttachment;
 
     SteveSledgeCompressorAudioProcessor& processor;
+    juce::Image brandArtwork; // Image supplied by the RED CROWN PNG library; GUI only.
     juce::ToggleButton simpleModeButton { "SIMPLE" };
 
     juce::Slider compSlider, attackSlider;
